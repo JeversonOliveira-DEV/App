@@ -15,8 +15,7 @@ decimal v = 34,4;
 Console.Write("  ");
 Console.Write("You have");
 Console.Write(" ");
-Console.Write(f);
-Console.Write(" ");
+Console.Write(f);Console.Write(" ");
 Console.Write("messages in your inbox.");
 Console.Write(" ");
 Console.Write("The temperature is ");
@@ -38,8 +37,7 @@ Console.ReadLine();*/
 /*Console.WriteLine("C:\\source\\repos");
 Console.ReadLine();*/
 
-Console.WriteLine("Geração de faturas para o cliente \"ABC Corp\" ...\n");
-Console.WriteLine("Fatura: 1021\t\tComplete!");
+/*Console.WriteLine("Fatura: 1021\t\tComplete!");
 Console.WriteLine("Fatura: 1022\t\tComplete!");
 Console.WriteLine("\nDiretório de saída:\t");
 //Console.ReadLine();
@@ -54,4 +52,26 @@ Console.Write(@"c:\invoices");
 //Para gerar faturas japonesas:
 Console.Write("\n\n\u65e5\u672c\u306e\u8acb\u6c42\u66f8\u3092\u751f\u6210\u3059\u308b\u306b\u306f\uff1a\n\t");
 Console.WriteLine(@"c:\invoices\app.exe -j");
+Console.ReadLine();*/
+
+/*string firstName = "Bob";
+string greeting = "hello";
+Console.WriteLine ($"{greeting} {firstName}!");
+
+string projectName = "First-Project";
+Console.WriteLine($@"C:\Output\{projectName}\Date");
+Console.ReadLine();*/
+
+string projectName = "ACME";
+
+string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
+
+Console.WriteLine($@"View English output:
+     C:\Exercise\{projectName}\data.text");
+
+Console.WriteLine($@"{russianMessage}
+     C:\Exercise\{projectName}\data.text");
+
+
+
 Console.ReadLine();
