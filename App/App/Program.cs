@@ -145,5 +145,53 @@ Console.WriteLine("The temperature is " + celsius + " Celsius.");*/
 //Console.WriteLine(5m / 10m);//Solução tem como resultado zero porque ao ta declarado como decimal.
 //Console.WriteLine(5m / 10m);//Manueira correta de usar asolução.
 
-Console.WriteLine(1 && 5);
-Console.ReadLine();
+//Chamar métodos da Biblioteca de Classes do .NET usando C#
+/*
+int firstValue = 500;
+int secondValue = 600;
+int largerValue;
+largerValue = Math.Max(firstValue, secondValue);//Math.Max é o metodo da classe Math. 
+
+
+Console.WriteLine(largerValue);
+*/
+
+
+Random dice = new Random();
+
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
+
+int total = roll1 + roll2 + roll3;
+    
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
+if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
+{
+    Console.WriteLine("Você rolou duplas! +2 de bônus no total!");
+    total += 2;
+}
+    if (total > 14)
+    {
+        Console.WriteLine("Você ganhau!");
+    }
+
+    if (total < 15)
+    {
+        Console.WriteLine("Desculpa, você perdeu.");
+    }
+    Console.ReadLine();
+
+
+/*
+string message = "The quick brown fox jumps over the lazy dog.";
+bool result = message.Contains("dog");
+Console.WriteLine(result);
+
+if (message.Contains("fox"))
+{
+    Console.WriteLine("What does the fox say?");
+}
+*/
+
