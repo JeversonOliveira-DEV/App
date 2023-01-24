@@ -26,6 +26,7 @@ Console.Write("celsius.");
 Console.ReadLine();*/
 
 using System;
+using System.Security.Cryptography;
 
 /*Console.WriteLine("Hello\nWord!");
 Console.WriteLine("Hello\tWord!");
@@ -156,19 +157,19 @@ largerValue = Math.Max(firstValue, secondValue);//Math.Max é o metodo da classe
 Console.WriteLine(largerValue);
 */
 
-   /*
+/*
 string message = "The quick brown fox jumps over the lazy dog.";
 bool result = message.Contains("dog");
 Console.WriteLine(result);
 
 if (message.Contains("fox"))
 {
-    Console.WriteLine("What does the fox say?");
+ Console.WriteLine("What does the fox say?");
 }
 */
 
 //Random dice = new();
-
+/*
 int roll1 = 6;//dice.Next(1, 7);
 int roll2 = 6;//dice.Next(1, 7);
 int roll3 = 6;//.Next(1, 7);
@@ -207,5 +208,26 @@ else
 {
     Console.WriteLine("Você ganha um gatinho!");
 }
+*/
 
-    Console.ReadLine();
+Random random = new();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0;
+
+if (daysUntilExpiration == 1)
+{
+    Console.WriteLine("Sua assinatura expira em um dia!\nRenove agora e economize 20 % !");
+}
+else if (daysUntilExpiration <= 5) 
+{
+    Console.WriteLine($"Sua assinatura expira {daysUntilExpiration} em  dias.\nRenove agora e economize 10%!");
+}
+else if  (daysUntilExpiration <= 10)
+{
+    Console.WriteLine("Sua assinatura expirará em breve.\nRenovar agora!");
+}
+// \n para pular de linha.
+// \t para dar espaço.
+// $ para chamar variavel para impresão.
+
+Console.ReadLine();
