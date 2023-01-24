@@ -156,35 +156,7 @@ largerValue = Math.Max(firstValue, secondValue);//Math.Max é o metodo da classe
 Console.WriteLine(largerValue);
 */
 
-
-Random dice = new Random();
-
-int roll1 = dice.Next(1, 7);
-int roll2 = dice.Next(1, 7);
-int roll3 = dice.Next(1, 7);
-
-int total = roll1 + roll2 + roll3;
-    
-Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
-
-if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
-{
-    Console.WriteLine("Você rolou duplas! +2 de bônus no total!");
-    total += 2;
-}
-    if (total > 14)
-    {
-        Console.WriteLine("Você ganhau!");
-    }
-
-    if (total < 15)
-    {
-        Console.WriteLine("Desculpa, você perdeu.");
-    }
-    Console.ReadLine();
-
-
-/*
+   /*
 string message = "The quick brown fox jumps over the lazy dog.";
 bool result = message.Contains("dog");
 Console.WriteLine(result);
@@ -195,3 +167,45 @@ if (message.Contains("fox"))
 }
 */
 
+//Random dice = new();
+
+int roll1 = 6;//dice.Next(1, 7);
+int roll2 = 6;//dice.Next(1, 7);
+int roll3 = 6;//.Next(1, 7);
+
+int total = roll1 + roll2 + roll3;
+    
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
+if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
+{
+    if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))//Etapa 3
+    {
+        Console.WriteLine("Você rolou duplas! +2 de bônus no total!");
+        total += 2;
+    }
+    else
+    {
+        Console.WriteLine("You rolled triples! +6 bonus to total!");
+        total += 6;
+    }
+}
+
+if (total >= 16)
+{
+    Console.WriteLine("Você ganhau um carro novo!");
+}
+else if (total >= 10)
+{
+    Console.WriteLine("Você ganhau um nootbook novo!");
+}
+else if (total == 7)
+{
+    Console.WriteLine("Você ganha uma viagem a dois!");
+}
+else
+{
+    Console.WriteLine("Você ganha um gatinho!");
+}
+
+    Console.ReadLine();
